@@ -2,5 +2,5 @@
 Stop Watch for iOS written in swift
 
 #TODO
-[] Icons for buttons
-[] Hour:Minute:Second.tenths formatting for time
+- [ ] Icons for buttons
+- [ ] Hour:Minute:Second.tenths formatting for time
