@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F4-rB-Oys">
-                                <rect key="frame" x="279" y="289" width="10" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F4-rB-Oys">
+                                <rect key="frame" x="279" y="289" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3j-8c-dL2">
-                                <rect key="frame" x="277" y="422" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3j-8c-dL2">
+                                <rect key="frame" x="277" y="422" width="57" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -31,7 +31,7 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AuL-fc-nCi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlX-fs-ASg">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlX-fs-ASg">
                                 <rect key="frame" x="277" y="130" width="40" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,8 +42,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="dlX-fs-ASg" secondAttribute="centerX" constant="3" id="TBL-QT-RkY"/>
+                            <constraint firstAttribute="centerX" secondItem="X3j-8c-dL2" secondAttribute="centerX" constant="-5.5" id="WP6-BF-x8J"/>
+                            <constraint firstAttribute="centerY" secondItem="7F4-rB-Oys" secondAttribute="centerY" constant="0.5" id="hl6-B5-Zjh"/>
+                            <constraint firstAttribute="centerX" secondItem="7F4-rB-Oys" secondAttribute="centerX" constant="2" id="wUz-fn-8Lh"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="X3j-8c-dL2" id="6wj-Xw-GhX"/>
                         <outlet property="time" destination="7F4-rB-Oys" id="Wrv-Bn-Lpr"/>
                     </connections>
                 </viewController>
