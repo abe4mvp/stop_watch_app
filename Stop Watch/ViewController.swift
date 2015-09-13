@@ -20,11 +20,15 @@ class ViewController: UIViewController {
     
     func updateTime() {
         count++
-        time.text = String(count)
+        time.text = getDisplayTime()
     }
     
     func updateStartButton() {
         startButton.setTitle(isPaused ? "Start" : "Pause", forState: .Normal)
+    }
+    
+    func getDisplayTime() -> String {
+        return "\(count / 10).\(count % 10)"
     }
     
 
@@ -32,7 +36,7 @@ class ViewController: UIViewController {
     @IBAction func start(sender: AnyObject) {
         
         if isPaused {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
             isPaused = false
             updateStartButton()
         } else {
@@ -48,7 +52,7 @@ class ViewController: UIViewController {
         isPaused = true
         updateStartButton()
         count = 0
-        time.text = "0"
+        time.text = "0.0"
         
     }
     
